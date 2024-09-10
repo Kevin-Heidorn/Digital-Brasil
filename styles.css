@@ -305,13 +305,14 @@ footer {
 /* Estilos do Carrossel */
 .carousel {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%; /* Tornar a largura responsiva */
+  max-width: 800px; /* Limitar a largura máxima */
+  height: auto;
+  aspect-ratio: 4/3; /* Manter a proporção 800x600 */
   margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 600px;
   animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -379,3 +380,38 @@ footer {
 .carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Media queries para dispositivos menores */
+@media (max-width: 768px) {
+  .carousel-caption h3 {
+    font-size: 18px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption h3 {
+    font-size: 16px;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+  }
+
+  .carousel-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
+
+
