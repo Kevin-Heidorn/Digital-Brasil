@@ -20,3 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(index + 1);
   }, 5000);
 });
+
+  function sendEmail() {
+    var email = "kevinheidorn20@gmail.com";  // Substitua pelo e-mail de destino
+    var subject = "Assunto do E-mail";  // Substitua pelo assunto
+    var body = "Olá gostaria de fazer um orçamento";  // Substitua pelo corpo da mensagem
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }

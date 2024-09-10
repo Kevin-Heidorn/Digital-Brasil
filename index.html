@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Digital Signage Brasil</title>
   <!-- Importar fontes do Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap">
@@ -13,14 +15,15 @@
   <header>
     <div class="container">
       <div class="logo">
-        <img src="/DSBRAS.png" alt="Logo Digital Signage">
+        <img src="/fotos/DSBRAS.png" alt="Logo Digital Signage">
       </div>
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Serviços</a></li>
+          <li><a href="/html/ser.html">Serviços</a></li>
           <li><a href="#about">Soluções</a></li>
           <li><a href="#contact">Contato</a></li>
+          <li><a href="/html/projetos.html">Projetos</a></li>
         </ul>
         <button class="hamburger" id="hamburger">&#9776;</button>
       </nav>
@@ -37,7 +40,6 @@
     
     <section id="carousel" class="section carousel-section bg-light">
       <div class="container">
-        <h2>Nosso Carrossel</h2>
         <div class="carousel">
           <div class="carousel-items">
             <div class="carousel-item">
@@ -88,12 +90,21 @@
       </div>
     </section>
     
-    <section id="about" class="section">
-      <div class="container">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma equipe dedicada a transformar a maneira como empresas se comunicam com seus clientes através de soluções de sinalização digital.</p>
+    <section id="about-us-section" class="about-us-section">
+      <div class="about-us-container">
+        <div class="about-us-content">
+          <h2 class="about-us-heading">Sobre Nós</h2>
+          <p class="about-us-text">
+            Somos uma equipe dedicada a transformar a maneira como empresas se comunicam com seus clientes através de soluções de sinalização digital.
+          </p>
+        </div>
+        <div class="about-us-image">
+          <img src="https://via.placeholder.com/400" alt="Nossa equipe">
+        </div>
       </div>
     </section>
+    
+    
     
     <section id="contact" class="section bg-light">
       <div class="container">
@@ -107,16 +118,16 @@
     <div class="footer-container">
       <div class="footer-info">
         <h2>Contate-nos</h2>
-        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Salvador, BA</p>
-        <p><strong>Telefone:</strong> (71) 1234-5678</p>
+        <p><strong>Endereço:</strong> Av. Tancredo Neves , 939 - Salvador, BA</p>
+        <p><strong>Telefone:</strong> (71) 3341-3666</p>
         <p><strong>Email:</strong> contato@digitalsignage.com.br</p>
       </div>
       <div class="footer-social">
         <h2>Siga-nos</h2>
         <div class="social-links">
-          <a href="https://facebook.com" target="_blank" class="social-link"><img src="https://via.placeholder.com/24x24?text=F" alt="Facebook"></a>
-          <a href="https://twitter.com" target="_blank" class="social-link"><img src="https://via.placeholder.com/24x24?text=T" alt="Youtube"></a>
-          <a href="https://instagram.com" target="_blank" class="social-link"><img src="https://via.placeholder.com/24x24?text=I" alt="Instagram"></a>
+          <a href="https://www.facebook.com/digitalsignagebr/" target="_blank" class="social-link"><img src="/fotos/OIP (1).jfif" alt="Facebook"></a>
+          <a href="https://www.youtube.com/dsbras" target="_blank" class="social-link"><img src="/fotos/Symbol-Youtube.png" alt="Youtube"></a>
+          <a href="https://instagram.com" target="_blank" class="social-link"><img src="/fotos/logo instagram yogiancreative.png" alt="Instagram"></a>
         </div>
       </div>
       <div class="footer-form">
@@ -125,7 +136,7 @@
           <input type="text" name="name" placeholder="Seu Nome" required>
           <input type="email" name="email" placeholder="Seu Email" required>
           <textarea name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
-          <button type="submit">Enviar</button>
+          <button onclick="sendEmail()">Enviar</button>
         </form>
       </div>
     </div>
