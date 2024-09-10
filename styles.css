@@ -119,10 +119,6 @@ nav {
   }
 }
 
-
-
-
-
 .hero {
   background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
   color: white;
@@ -445,28 +441,41 @@ footer {
   font-size: 16px;
 }
 
+/* Estilo do botão do carrossel */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   font-size: 24px;
-  border-radius: 50%;
+  border-radius: 50%; /* Botão circular */
   width: 40px;
   height: 40px;
+  display: flex; /* Centra o texto/icon dentro do botão */
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Garantir que os botões fiquem acima do conteúdo do carrossel */
 }
 
+/* Botão de navegação anterior */
 .carousel-btn.prev {
-  left: 10px;
+  left: 10px; /* Posiciona o botão à esquerda */
 }
 
+/* Botão de navegação seguinte */
 .carousel-btn.next {
-  right: 10px;
+  right: 10px; /* Posiciona o botão à direita */
 }
+
+/* Garanta que o contêiner do carrossel tenha uma posição relativa */
+.carousel-container {
+  position: relative; /* Necessário para que os botões sejam posicionados corretamente */
+}
+
 
 .carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
