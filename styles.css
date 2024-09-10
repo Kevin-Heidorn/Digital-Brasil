@@ -10,8 +10,6 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4; /* Cor de fundo geral */
   color: #333;
-  padding-top: 60px; /* Adiciona espaçamento no topo para o cabeçalho fixo */
-  padding-bottom: 60px; /* Adiciona espaçamento na parte inferior para o rodapé fixo */
 }
 
 .container {
@@ -20,10 +18,10 @@ body {
 }
 
 header {
-  background-color: rgba(0, 77, 0, 0.8); /* Cabeçalho transparente com tom verde */
+  background-color: #003300; /* Verde sólido como o rodapé */
   color: white;
   padding: 20px 0;
-  position: fixed;
+  position: relative; /* Fixar o cabeçalho no topo */
   width: 100%;
   top: 0;
   left: 0;
@@ -35,7 +33,7 @@ header {
 }
 
 .header-scrolled {
-  background-color: rgba(0, 77, 0, 0.9); /* Escurecimento do cabeçalho ao rolar */
+  background-color: #002200; /* Verde um pouco mais escuro quando rolar */
 }
 
 .logo h1 {
@@ -172,6 +170,7 @@ main {
   transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 footer {
   background-color: #003300; /* Tom de verde escuro */
   color: #fff;
@@ -280,7 +279,6 @@ footer {
   }
 }
 
-
 /* Efeitos de animação */
 @keyframes fadeIn {
   from {
@@ -373,4 +371,3 @@ footer {
 .carousel-btn.next {
   right: 10px;
 }
-
