@@ -97,7 +97,7 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 60px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
-    right: 10px;
+    left: 10px; /* Posiciona o menu lateral à esquerda do botão do hambúrguer */
     width: 250px;
     padding: 20px;
     border-radius: 8px;
@@ -119,35 +119,6 @@ nav {
   }
 }
 
-
-/* Estilo do menu lateral para dispositivos móveis */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 250px;
-    padding: 20px;
-    background-color: #89be5d; /* Cor de fundo do menu lateral */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .nav-active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
 
 
 
