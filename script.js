@@ -27,3 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     var body = "Olá gostaria de fazer um orçamento";  // Substitua pelo corpo da mensagem
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('nav-active');
+    });
+  });
+  

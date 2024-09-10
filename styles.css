@@ -20,8 +20,9 @@ body {
   margin: 0 auto;
 }
 
+/* Estilo do cabeçalho */
 header {
-  background-color:#89be5d;; /* Verde sólido como o rodapé */
+  background-color: #89be5d; /* Verde sólido como o rodapé */
   color: white;
   padding: 20px 0;
   position: relative; /* Fixar o cabeçalho no topo */
@@ -49,6 +50,7 @@ header {
 nav {
   display: flex;
   align-items: center;
+  position: relative; /* Adicionar para o menu lateral aparecer abaixo do botão */
 }
 
 .nav-links {
@@ -84,7 +86,39 @@ nav {
   border: none;
   color: white;
   cursor: pointer;
+  position: relative;
+  z-index: 1001; /* Garantir que o botão do hambúrguer esteja acima do menu */
 }
+
+/* Estilo do menu lateral para dispositivos móveis */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
+    right: 10px;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #89be5d; /* Manter a cor do fundo do menu lateral */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 
 /* Estilo do menu lateral para dispositivos móveis */
 @media (max-width: 768px) {
@@ -96,12 +130,14 @@ nav {
     right: 10px;
     width: 250px;
     padding: 20px;
+    background-color: #89be5d; /* Cor de fundo do menu lateral */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
   .nav-links li {
     margin: 10px 0;
+    text-align: center;
   }
 
   .nav-active {
@@ -113,9 +149,8 @@ nav {
   }
 }
 
-.main {
 
-}
+
 
 .hero {
   background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
