@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  background-color: #003300; /* Verde sólido como o rodapé */
+  background-color:#89be5d;; /* Verde sólido como o rodapé */
   color: white;
   padding: 20px 0;
   position: relative; /* Fixar o cabeçalho no topo */
@@ -57,6 +57,7 @@ nav {
 
 .nav-links li {
   font-size: 18px;
+  margin-top: -15%;
 }
 
 .nav-links a {
@@ -172,7 +173,7 @@ nav {
 }
 
 footer {
-  background-color: #003300; /* Tom de verde escuro */
+  background-color:#A1DD70;  /* Tom de verde escuro */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -256,13 +257,13 @@ footer {
 }
 
 .footer-form button:hover {
-  background-color: #007700;
+  background-color: #CEDF9F;
 }
 
 .footer-info p,
 .footer-form input,
 .footer-form textarea {
-  color: #f9f9f9;
+  color: #050505;
 }
 
 /* Responsividade */
