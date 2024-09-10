@@ -91,7 +91,6 @@ nav {
     position: absolute;
     top: 60px;
     right: 10px;
-    background-color: rgba(0, 77, 0, 0.8); /* Verde escuro transparente para o menu lateral */
     width: 250px;
     padding: 20px;
     border-radius: 8px;
@@ -120,7 +119,7 @@ main {
   color: white;
   text-align: center;
   padding: 100px 20px;
-  background-color: rgba(0, 77, 0, 0.8); /* Verde escuro transparente para a seção hero */
+  background-color: rgba(63, 189, 63, 0.8); /* Verde escuro transparente para a seção hero */
   background-blur: 10px; /* Adiciona desfoque ao fundo */
 }
 
