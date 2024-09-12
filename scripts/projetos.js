@@ -81,3 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCarousel();
     }, 5000);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  
+    // Para fechar o menu ao clicar fora dele
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        navLinks.classList.remove('nav-active');
+      }
+    });
+  });
+  
+
