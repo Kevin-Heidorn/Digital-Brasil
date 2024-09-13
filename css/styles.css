@@ -279,9 +279,8 @@ nav {
 }
 
 
-
 footer {
-  background-color:#A1DD70;  /* Tom de verde escuro */
+  background-color: #A1DD70;  /* Tom de verde escuro */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -290,7 +289,6 @@ footer {
   position: relative;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .footer-container {
@@ -302,7 +300,6 @@ footer {
   margin: 0 auto;
   color: #050505;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .footer-info,
@@ -312,9 +309,7 @@ footer {
   min-width: 250px;
   margin: 10px;
   font-family: "Montserrat", sans-serif;
-
 }
-
 
 .footer-info h2,
 .footer-social h2,
@@ -354,14 +349,12 @@ footer {
 
 .footer-form input,
 .footer-form textarea {
-  width: 80%;
+  width: calc(100% - 20px);  /* Ajuste para o padding */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 15px;
   border: 1px solid #ccc;
-
 }
-
 
 .footer-form button {
   background-color: #53a153;
@@ -385,7 +378,7 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -395,7 +388,31 @@ footer {
   .footer-social,
   .footer-form {
     margin: 20px 0;
-    
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-info h2,
+  .footer-social h2,
+  .footer-form h2 {
+    font-size: 18px;
+  }
+
+  .footer-info p,
+  .footer-form input,
+  .footer-form textarea {
+    font-size: 14px;
+  }
+
+  .social-link img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .footer-form input,
+  .footer-form textarea {
+    width: calc(100% - 20px);  /* Ajuste para o padding */
   }
 }
 
@@ -421,6 +438,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 /* Estilos do Carrossel */
 .carousel {
   position: relative;
