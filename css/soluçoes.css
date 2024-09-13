@@ -13,6 +13,21 @@ body {
   background-color: #f4f4f4; /* Cor de fundo geral */
   color: #333;
 }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Cor de fundo geral */
+  color: #333;
+}
 
 .container {
   width: 85%;
@@ -115,5 +130,118 @@ nav {
 
   .hamburger {
     display: block;
+  }
+}
+
+/* Seções principais */
+main {
+  padding: 40px 0;
+  margin-top: 80px; /* Adiciona espaço suficiente no topo para o cabeçalho fixo */
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+  width: 50%;
+}
+
+.section-content h2 {
+  font-size: 32px;
+  color: #89be5d;
+  margin-bottom: 15px;
+}
+
+.section-content p {
+  font-size: 18px;
+  color: #555;
+}
+
+.section img {
+  width: 50%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.section img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo de seções alternadas para mais dinamismo */
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    flex: none;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Alinha o botão hambúrguer e o logo */
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #89be5d;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .section-content {
+    width: 100%;
+  }
+
+  .section img {
+    width: 80%;
+    margin-top: 20px;
   }
 }

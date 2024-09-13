@@ -3,32 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/soluçoes.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="../css/soluçoes.css">
+  <script src="/scripts/soluções.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>Digital Signage Brasil</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap">
+  <title>Digital Signage Brasil</title>
 </head>
-<header>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="/fotos/DSBRAS.png" alt="Logo Digital Signage">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/fotos/DSBRAS.png" alt="Logo Digital Signage">
+      </div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/html/produtos.html">Produtos</a></li>
+          <li><a href="/html/ser.html">Serviços</a></li>
+          <li><a href="/html/contato.html">Contato</a></li>
+          <li><a href="/html/projetos.html"> Cases</a></li>
+          <li><a href="/html/midia.html">Mídia</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+      </nav>
     </div>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/html/produtos.html">produtos</a></li>
-        <li><a href="/html/ser.html">Serviços</a></li>
-        <li><a href="/html/soluçoes.html">Soluções</a></li>
-        <li><a href="/html/contato.html">Contato</a></li>
-        <li><a href="/html/projetos.html">Projetos</a></li>
-        <li><a href="/html/midia.html">Midia</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-    </nav>
-  </div>
-</header>  
- 
+  </header>
+
+  <!-- Seções principais -->
+  <main>
+    <section class="section menu-board">
+      <div class="section-content">
+        <h2>Menu Board</h2>
+        <p>Soluções para exibição de menus digitais em estabelecimentos comerciais, melhorando a experiência do cliente e facilitando a gestão do cardápio.</p>
+      </div>
+      <img src="/fotos/menu-board.png" alt="Menu Board">
+    </section>
+
+    <section class="section tv-corporativa">
+      <div class="section-content">
+        <h2>TV Corporativa</h2>
+        <p>Transforme a comunicação interna da sua empresa com TVs corporativas, exibindo conteúdos relevantes de forma moderna e interativa.</p>
+      </div>
+      <img src="/fotos/tv-corporativa.png" alt="TV Corporativa">
+    </section>
+
+    <section class="section mural-digital">
+      <div class="section-content">
+        <h2>Mural Digital</h2>
+        <p>Crie murais digitais dinâmicos para sua empresa ou instituição, promovendo uma comunicação visual eficiente e atraente.</p>
+      </div>
+      <img src="/fotos/mural-digital.png" alt="Mural Digital">
+    </section>
+  </main>
+
 </body>
 </html>
