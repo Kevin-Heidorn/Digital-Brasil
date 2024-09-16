@@ -3,28 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/midia.css">
-    <title>Digital Signage Brasil</title>
+    <link rel="stylesheet" href="/css/midia.css">
+    <title>Digital Signage Brasil - Mídia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-          <div class="logo">
-            <img src="/fotos/DSBRAS.png" alt="Logo Digital Signage">
-          </div>
-          <nav>
-            <ul class="nav-links" id="nav-links">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="./html/prudutos.html">Loja</a></li>
-              <li><a href="./html/soluçoes.html">Soluções</a></li>
-              <li><a href="./html/contato.html">Contato</a></li>
-              <li><a href="./html/projetos.html">Cases</a></li>
-              <li><a href="/html/midia.html">Midia</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">&#9776;</button>
-          </nav>
+            <div class="logo">
+                <img src="/fotos/DSBRAS.png" alt="Logo Digital Signage">
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./html/prudutos.html">Loja</a></li>
+                    <li><a href="./html/soluçoes.html">Soluções</a></li>
+                    <li><a href="./html/contato.html">Contato</a></li>
+                    <li><a href="./html/projetos.html">Cases</a></li>
+                    <li><a href="/html/midia.html">Mídia</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+            </nav>
         </div>
-      </header>  
-    
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1>Bem-vindo à Seção de Mídia</h1>
+                <p>Descubra nossos vídeos e atualizações sobre digital signage. Aqui você encontrará informações sobre nossos produtos e soluções, além de novidades e tendências no setor.</p>
+            </div>
+        </section>
+
+        <section class="video-gallery">
+            <div class="container">
+                <h2>Galeria de Vídeos</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/video1" title="Vídeo 1" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video2" title="Vídeo 2" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video3" title="Vídeo 3" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-updates">
+            <div class="container">
+                <h2>Notícias e Atualizações</h2>
+                <div class="news-container">
+                    <article>
+                        <h3>Atualização 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at sapien libero. Curabitur in orci lacus.</p>
+                    </article>
+                    <article>
+                        <h3>Atualização 2</h3>
+                        <p>Maecenas sed metus vel nulla cursus pretium. Duis vehicula velit eu urna elementum, at fermentum odio commodo.</p>
+                    </article>
+                    <article>
+                        <h3>Atualização 3</h3>
+                        <p>Vivamus maximus risus at justo facilisis tempor. Nulla facilisi. Nulla varius justo in urna vehicula.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h4>Sobre Nós</h4>
+          <p>Digital Signage Brasil é líder em soluções de sinalização digital, oferecendo inovações que transformam a comunicação visual.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./html/prudutos.html">Loja</a></li>
+            <li><a href="./html/soluçoes.html">Soluções</a></li>
+            <li><a href="./html/contato.html">Contato</a></li>
+            <li><a href="./html/projetos.html">Cases</a></li>
+            <li><a href="/html/midia.html">Midia</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>Email: contato@digitalsignagebrasil.com</p>
+          <p>Telefone: (11) 1234-5678</p>
+          <div class="social-media">
+            <a href="https://facebook.com/digitalsignagebrasil" target="_blank">Facebook</a>
+            <a href="https://twitter.com/digitalsignagebrasil" target="_blank">Twitter</a>
+            <a href="https://linkedin.com/company/digitalsignagebrasil" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+     
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('nav-active');
+        });
+
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('header-scrolled', window.scrollY > 0);
+        });
+    </script>
 </body>
 </html>

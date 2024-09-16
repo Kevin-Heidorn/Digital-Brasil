@@ -50,9 +50,6 @@ header {
   transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
 }
 
-.header-scrolled {
-  background-color: #002200; /* Verde um pouco mais escuro quando rolar */
-}
 
 .logo h1 {
   margin: 0;
