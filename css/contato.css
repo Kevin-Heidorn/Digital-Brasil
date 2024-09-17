@@ -80,7 +80,9 @@
     border: none;
     color: white;
     cursor: pointer;
-    position: relative;
+    position: absolute; /* Usar position absolute para posicionar o botão */
+    top: -40px; /* Ajuste a distância do topo do cabeçalho para subir o botão */
+    right: 1px; /* Mantém a distância da borda direita do cabeçalho */
     z-index: 1001; /* Garantir que o botão do hambúrguer esteja acima do menu */
   }
   
@@ -90,9 +92,9 @@
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 60px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
-      left: 10px; /* Posiciona o menu lateral à esquerda do botão do hambúrguer */
-      width: 250px;
+      top: -30px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
+      right: 1px; /* Posiciona o menu lateral à direita do cabeçalho */
+      width: 150px;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -111,8 +113,7 @@
     .hamburger {
       display: block;
     }
-  }
-  
+   }
 
 
 
