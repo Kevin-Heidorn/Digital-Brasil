@@ -1,255 +1,352 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Cor de fundo geral */
-    color: #333;
-  }
-  
-  .container {
-    width: 85%;
-    margin: 0 auto;
-  }
-  
-  /* Estilo do cabeçalho */
-  header {
-    background-color: #89be5d; /* Verde sólido como o rodapé */
-    color: white;
-    padding: 20px 0;
-    position: relative; /* Fixar o cabeçalho no topo */
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
-  }
-  
-  .logo h1 {
-    margin: 0;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    color: #e6f9e6; /* Verde claro para o texto do logo */
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-    position: relative; /* Adicionar para o menu lateral aparecer abaixo do botão */
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Cor de fundo geral */
+  color: #333;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #89be5d; /* Verde sólido como o rodapé */
+  color: white;
+  padding: 20px 0;
+  position: relative; /* Fixar o cabeçalho no topo */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: #e6f9e6; /* Verde claro para o texto do logo */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: relative; /* Adicionar para o menu lateral aparecer abaixo do botão */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.nav-links li {
+  font-size: 18px;
+  margin-top: -10%;
+}
+
+.nav-links a {
+  color: #e6f9e6; /* Verde claro para o texto dos links */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: #007a00; /* Verde médio para o fundo ao passar o mouse */
+  color: #e6f9e6; /* Verde claro para o texto ao passar o mouse */
+}
+
+.hamburger {
+  font-family: 'Roboto', sans-serif;
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute; /* Usar position absolute para posicionar o botão */
+  top: -40px; /* Ajuste a distância do topo do cabeçalho para subir o botão */
+  right: 1px; /* Mantém a distância da borda direita do cabeçalho */
+  z-index: 1001; /* Garantir que o botão do hambúrguer esteja acima do menu */
+}
+
+/* Estilo do menu lateral para dispositivos móveis */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-left: auto;
-  }
-  
-  .nav-links li {
-    font-size: 18px;
-    margin-top: -10%;
-  }
-  
-  .nav-links a {
-    color: #e6f9e6; /* Verde claro para o texto dos links */
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px;
-  }
-  
-  .nav-links a:hover {
-    background-color: #007a00; /* Verde médio para o fundo ao passar o mouse */
-    color: #e6f9e6; /* Verde claro para o texto ao passar o mouse */
-  }
-  
-  .hamburger {
-    font-family: 'Roboto', sans-serif;
     display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute; /* Usar position absolute para posicionar o botão */
-    top: -40px; /* Ajuste a distância do topo do cabeçalho para subir o botão */
-    right: 1px; /* Mantém a distância da borda direita do cabeçalho */
-    z-index: 1001; /* Garantir que o botão do hambúrguer esteja acima do menu */
+    flex-direction: column;
+    position: absolute;
+    top: -30px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
+    right: 1px; /* Posiciona o menu lateral à direita do cabeçalho */
+    width: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #89be5d; /* Manter a cor do fundo do menu lateral */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
-  /* Estilo do menu lateral para dispositivos móveis */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: -30px; /* Ajuste para ficar logo abaixo do botão do hambúrguer */
-      right: 1px; /* Posiciona o menu lateral à direita do cabeçalho */
-      width: 150px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      background-color: #89be5d; /* Manter a cor do fundo do menu lateral */
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-  
-    .nav-active {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    .hamburger {
-      display: block;
-    }
-   }
+
+  .nav-active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+ }
+/* Estilo da seção de contato */
+.contact-section {
+  background-color: #fff; /* Fundo branco para a seção de contato */
+  padding: 40px 0; /* Espaçamento vertical */
+}
+
+.contact-section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-form,
+.contact-details {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2,
+.contact-details h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button {
+  background-color: #89be5d; /* Verde sólido */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007a00; /* Verde médio ao passar o mouse */
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #89be5d; /* Verde sólido */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007a00; /* Verde médio ao passar o mouse */
+}
 
 
 footer {
-    background-color: #A1DD70;  /* Tom de verde escuro */
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 -7px 8px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    font-family: "Montserrat", sans-serif;
-  }
-  
+  background-color: #A1DD70;  /* Tom de verde escuro */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 -7px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #050505;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-info,
+.footer-social,
+.footer-form {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-info h2,
+.footer-social h2,
+.footer-form h2 {
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.footer-info p,
+.footer-form input,
+.footer-form textarea {
+  font-size: 16px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-link img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-link img:hover {
+  transform: scale(1.1);
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: calc(100% - 20px);  /* Ajuste para o padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+.footer-form button {
+  background-color: #53a153;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+  background-color: #3bc552;
+}
+
+.footer-info p,
+.footer-form input,
+.footer-form textarea {
+  color: #050505;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
   .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #050505;
-    font-family: "Montserrat", sans-serif;
+    flex-direction: column;
+    align-items: center;
   }
   
   .footer-info,
   .footer-social,
   .footer-form {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-    font-family: "Montserrat", sans-serif;
+    margin: 20px 0;
+    width: 100%;
   }
-  
+}
+
+@media (max-width: 768px) {
   .footer-info h2,
   .footer-social h2,
   .footer-form h2 {
-    margin-bottom: 15px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
   }
-  
+
   .footer-info p,
   .footer-form input,
   .footer-form textarea {
-    font-size: 16px;
+    font-size: 14px;
   }
-  
-  .footer-social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
+
   .social-link img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-link img:hover {
-    transform: scale(1.1);
+    width: 25px;
+    height: 25px;
   }
   
   .footer-form input,
   .footer-form textarea {
     width: calc(100% - 20px);  /* Ajuste para o padding */
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
   }
-  
-  .footer-form button {
-    background-color: #53a153;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .footer-form button:hover {
-    background-color: #3bc552;
-  }
-  
-  .footer-info p,
-  .footer-form input,
-  .footer-form textarea {
-    color: #050505;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 1024px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .footer-info,
-    .footer-social,
-    .footer-form {
-      margin: 20px 0;
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-info h2,
-    .footer-social h2,
-    .footer-form h2 {
-      font-size: 18px;
-    }
-  
-    .footer-info p,
-    .footer-form input,
-    .footer-form textarea {
-      font-size: 14px;
-    }
-  
-    .social-link img {
-      width: 25px;
-      height: 25px;
-    }
-    
-    .footer-form input,
-    .footer-form textarea {
-      width: calc(100% - 20px);  /* Ajuste para o padding */
-    }
-  }
-  
+}

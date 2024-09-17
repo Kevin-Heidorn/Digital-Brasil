@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Digital Signage Brasil</title>
   <link rel="stylesheet" href="../css/contato.css">
   <script src="../scripts/global.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>Digital Signage Brasil</title>
   <!-- Importar fontes do Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap">
 </head>
@@ -20,56 +20,84 @@
           <nav>
             <ul class="nav-links" id="nav-links">
               <li><a href="../index.html">Home</a></li>
-              <li><a href="prudutos.html">Loja</a></li>
-              <li><a href="soluçoes.html">Soluções</a></li>
+              <li><a href="produtos.html">Loja</a></li>
+              <li><a href="solucoes.html">Soluções</a></li>
               <li><a href="contato.html">Contato</a></li>
               <li><a href="projetos.html">Cases</a></li>
-              <li><a href="midia.html">Midia</a></li>
+              <li><a href="midia.html">Mídia</a></li>
             </ul>
             <button class="hamburger" id="hamburger">&#9776;</button>
           </nav>
         </div>
       </header>  
-      
 
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h1>Entre em Contato</h1>
+                <div class="contact-info">
+                    <div class="contact-form">
+                        <h2>Formulário de Contato</h2>
+                        <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem:</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="contact-details">
+                        <h2>Informações de Contato</h2>
+                        <p><strong>Email:</strong> contato@digitalsignagebrasil.com</p>
+                        <p><strong>Telefone:</strong> (71) 1234-5678</p>
+                        <p><strong>Endereço:</strong> Rua Exemplo, 123, Salvador - BA, Brasil</p>
+                        <div class="social-media">
+                            <a href="https://facebook.com/digitalsignagebrasil" target="_blank">Facebook</a>
+                            <a href="https://twitter.com/digitalsignagebrasil" target="_blank">Twitter</a>
+                            <a href="https://linkedin.com/company/digitalsignagebrasil" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-
-  
-      
-<footer>
-    <div class="footer-container">
-      <div class="footer-info">
-        <h4>Sobre Nós</h4>
-        <p>Digital Signage Brasil é líder em soluções de sinalização digital, oferecendo inovações que transformam a comunicação visual.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Links Rápidos</h4>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/html/ser.html">Serviços</a></li>
-          <li><a href="/html/soluçoes.html">Soluções</a></li>
-          <li><a href="/html/contato.html">Contato</a></li>
-          <li><a href="/html/projetos.html">Projetos</a></li>
-          <li><a href="/html/midia.html">Midia</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contato</h4>
-        <p>Email: contato@digitalsignagebrasil.com</p>
-        <p>Telefone: (11) 1234-5678</p>
-        <div class="social-media">
-          <a href="https://facebook.com/digitalsignagebrasil" target="_blank">Facebook</a>
-          <a href="https://twitter.com/digitalsignagebrasil" target="_blank">Twitter</a>
-          <a href="https://linkedin.com/company/digitalsignagebrasil" target="_blank">LinkedIn</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>Sobre Nós</h4>
+                <p>Digital Signage Brasil é líder em soluções de sinalização digital, oferecendo inovações que transformam a comunicação visual.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/html/ser.html">Serviços</a></li>
+                    <li><a href="/html/soluçoes.html">Soluções</a></li>
+                    <li><a href="/html/contato.html">Contato</a></li>
+                    <li><a href="/html/projetos.html">Projetos</a></li>
+                    <li><a href="/html/midia.html">Mídia</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Email: contato@digitalsignagebrasil.com</p>
+                <p>Telefone: (71) 1234-5678</p>
+                <div class="social-media">
+                    <a href="https://facebook.com/digitalsignagebrasil" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/digitalsignagebrasil" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com/company/digitalsignagebrasil" target="_blank">LinkedIn</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-   
-  </footer>
-  
-
-
-
-
+    </footer>
 </body>
 </html>
